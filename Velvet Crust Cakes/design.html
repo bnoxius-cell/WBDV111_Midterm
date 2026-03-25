@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customize - Velvet Crust</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="content-wrapper" style="display: flex; justify-content: center;">
+        <div class="glass-panel" style="width: 100%; max-width: 600px;">
+            <h2>Customize Flavors</h2>
+            <p>Mix and match to create your perfect cake profile.</p>
+
+            <form>
+                <div class="form-group">
+                    <label>Sponge Base</label>
+                    <select id="cake-base" class="glass-input" onchange="updatePreview()">
+                        <option value="Vanilla Bean">Vanilla Bean</option>
+                        <option value="Rich Cocoa">Rich Cocoa</option>
+                        <option value="Red Velvet">Red Velvet</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Frosting Style</label>
+                    <select id="cake-frosting" class="glass-input" onchange="updatePreview()">
+                        <option value="Swiss Buttercream">Swiss Buttercream</option>
+                        <option value="Dark Chocolate Ganache">Dark Chocolate Ganache</option>
+                        <option value="Cream Cheese">Cream Cheese</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Garnish / Toppings</label>
+                    <select id="cake-toppings" class="glass-input" onchange="updatePreview()">
+                        <option value="Fresh Seasonal Berries">Fresh Seasonal Berries</option>
+                        <option value="Edible Gold & Macarons">Edible Gold & Macarons</option>
+                        <option value="Toasted Almonds">Toasted Almonds</option>
+                    </select>
+                </div>
+                
+                <div style="background: rgba(0,0,0,0.3); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h3 style="color: var(--cream); font-size: 1.2rem;">Your Blueprint:</h3>
+                    <p id="preview-text" style="margin: 0;">Custom Design: Vanilla Bean base, frosted with Swiss Buttercream, topped with Fresh Seasonal Berries.</p>
+                </div>
+
+                <a href="order.html" class="cream-btn" style="width: 100%; text-align: center;">Proceed to Date & Order</a>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

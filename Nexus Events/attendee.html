@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guestlist - Nexus Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="page-container" style="display: flex; justify-content: center;">
+        <div style="width: 100%; max-width: 600px;">
+            <h1 style="margin-bottom: 1rem;">GUESTLIST</h1>
+            <p style="font-size: 1.3rem;">Enter your details to generate your digital pass.</p>
+
+            <form class="neo-form" onsubmit="generatePass(event)">
+                <label>Full Name</label>
+                <input type="text" class="neo-input" placeholder="KRAM ATERU" required>
+
+                <label>Email Address</label>
+                <input type="email" class="neo-input" placeholder="EVENTS@NEXUS.COM" required>
+
+                <label>Phone Number (For SMS Ticket)</label>
+                <input type="tel" class="neo-input" placeholder="+63 912 345 6789" required>
+
+                <button type="submit" class="neo-btn btn-yellow" style="width: 100%; font-size: 2rem; margin-top: 2rem;">GENERATE QR</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
