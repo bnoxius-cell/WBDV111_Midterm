@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Appointment - HealthSync</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="page-container" style="display: flex; flex-direction: column; justify-content: center; min-height: 80vh;">
+        
+        <div class="wizard-container">
+            <div class="wizard-progress">
+                <div class="progress-dot active"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+            </div>
+
+            <div id="step-1" class="wizard-step active">
+                <h1>What type of care do you need?</h1>
+                <p>Select a specialty to begin your booking.</p>
+                
+                <div class="wizard-options">
+                    <button class="wizard-option-btn" onclick="nextStep(2, 'General Practice')">
+                        <div>
+                            General Practice
+                            <span class="sub-text">Routine checkups, flu symptoms, general health.</span>
+                        </div>
+                        <span style="color: var(--trust-blue);">&rarr;</span>
+                    </button>
+                    <button class="wizard-option-btn" onclick="nextStep(2, 'Cardiology')">
+                        <div>
+                            Cardiology
+                            <span class="sub-text">Heart health, blood pressure, EKGs.</span>
+                        </div>
+                        <span style="color: var(--trust-blue);">&rarr;</span>
+                    </button>
+                    <button class="wizard-option-btn" onclick="nextStep(2, 'Pediatrics')">
+                        <div>
+                            Pediatrics
+                            <span class="sub-text">Care for infants, children, and adolescents.</span>
+                        </div>
+                        <span style="color: var(--trust-blue);">&rarr;</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="step-2" class="wizard-step">
+                <h1>Choose your Provider</h1>
+                <p>Select an available doctor for your chosen specialty.</p>
+                
+                <div class="wizard-options">
+                    <button class="wizard-option-btn" onclick="nextStep(3, 'Dr. Emily Chen')">
+                        <div>
+                            Dr. Emily Chen, MD
+                            <span class="sub-text">Board Certified • 15+ Years Experience</span>
+                        </div>
+                        <span style="color: var(--trust-blue);">&rarr;</span>
+                    </button>
+                    <button class="wizard-option-btn" onclick="nextStep(3, 'Dr. Marcus Webb')">
+                        <div>
+                            Dr. Marcus Webb, MD
+                            <span class="sub-text">Chief of Department • Accepting New Patients</span>
+                        </div>
+                        <span style="color: var(--trust-blue);">&rarr;</span>
+                    </button>
+                </div>
+                <button class="btn btn-outline" style="margin-top: 2rem;" onclick="nextStep(1)">Start Over</button>
+            </div>
+
+            <div id="step-3" class="wizard-step">
+                <h1>When would you like to come in?</h1>
+                <p>Select an available time slot for this week.</p>
+                
+                <div class="wizard-options" style="grid-template-columns: 1fr 1fr;">
+                    <button class="wizard-option-btn" style="justify-content: center; text-align: center;" onclick="nextStep(4, 'Oct 24 - 9:00 AM')">
+                        <div>Thursday, Oct 24<span class="sub-text">9:00 AM</span></div>
+                    </button>
+                    <button class="wizard-option-btn" style="justify-content: center; text-align: center;" onclick="nextStep(4, 'Oct 24 - 11:30 AM')">
+                        <div>Thursday, Oct 24<span class="sub-text">11:30 AM</span></div>
+                    </button>
+                    <button class="wizard-option-btn" style="justify-content: center; text-align: center;" onclick="nextStep(4, 'Oct 25 - 2:00 PM')">
+                        <div>Friday, Oct 25<span class="sub-text">2:00 PM</span></div>
+                    </button>
+                    <button class="wizard-option-btn" style="justify-content: center; text-align: center;" onclick="nextStep(4, 'Oct 25 - 4:15 PM')">
+                        <div>Friday, Oct 25<span class="sub-text">4:15 PM</span></div>
+                    </button>
+                </div>
+                <button class="btn btn-outline" style="margin-top: 2rem;" onclick="nextStep(2)">Back</button>
+            </div>
+
+            <div id="step-4" class="wizard-step">
+                <h1>Review & Confirm</h1>
+                <p>Please review your appointment details below.</p>
+                
+                <div class="clinic-card" style="text-align: left; margin-top: 2rem; background: #f0f9ff; border-color: var(--trust-blue);">
+                    <h3 style="margin-bottom: 1rem; color: var(--trust-blue);">Appointment Summary</h3>
+                    <p style="color: var(--text-dark);"><strong>Provider:</strong> Dr. Emily Chen, MD</p>
+                    <p style="color: var(--text-dark);"><strong>Date & Time:</strong> Thursday, Oct 24 at 9:00 AM</p>
+                    <p style="color: var(--text-dark);"><strong>Location:</strong> HealthSync Main Campus, Suite 101</p>
+                    <p style="color: var(--text-dark); margin-top: 1rem; border-top: 1px solid var(--border-light); padding-top: 1rem;"><strong>Estimated Co-Pay:</strong> PHP 1,500.00</p>
+                </div>
+
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                    <button class="btn btn-outline" onclick="nextStep(3)">Back</button>
+                    <button class="btn btn-primary" onclick="confirmAppointment()">Confirm Appointment</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

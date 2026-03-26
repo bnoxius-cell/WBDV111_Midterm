@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nutrition Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Hidden Toggle -->
+<input type="checkbox" id="loginToggle" class="drawer-toggle">
+
+<header class="navbar">
+    <div class="logo"><a href="index.html">FreshBite Prep</a></div>
+    <div class="nav-btns">
+        <a href="meals.html">Meals</a>
+        <a href="delivery.html">Delivery</a>
+        <a href="macros.html">Macros</a>
+        <label for="loginToggle" class="login-open-btn">Login</label>
+
+    </div>
+</header>
+
+<div class="login-drawer">
+
+    <div class="drawer-header">
+        <h2>Login</h2>
+        <label for="loginToggle" class="close-btn">✕</label>
+    </div>
+
+    <form class="drawer-form">
+        <label>Email</label>
+        <input type="email" placeholder="Enter email">
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter password">
+
+        <a href="#" class="forgot">Forgot password?</a>
+
+        <button type="submit">Login</button>
+
+        <p class="register-text">
+            Don't have an account?
+            <a href="#">Register</a>
+        </p>
+    </form>
+</div>
+
+<h1>Your Weekly Macros</h1>
+
+<div class="dashboard">
+
+  <div class="macro-box">
+    <h2>Calories</h2>
+    <p>13,200 kcal</p>
+  </div>
+
+  <div class="macro-box">
+    <h2>Protein</h2>
+    <p>780 g</p>
+  </div>
+
+  <div class="macro-box">
+    <h2>Carbs</h2>
+    <p>1,100 g</p>
+  </div>
+
+  <div class="macro-box">
+    <h2>Fats</h2>
+    <p>420 g</p>
+  </div>
+  <p style="text-align:center; color:#64748b;">
+  Estimated weekly nutrition based on your selected meals
+</p>
+</div>
+<div class="macro-grid">
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medical History - HealthSync</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="page-container">
+        <h1>Patient Dashboard</h1>
+        <p style="margin-bottom: 2rem;">View your past visits and upcoming appointments.</p>
+
+        <div class="clinic-card">
+            <h2>Upcoming Appointments</h2>
+            <table class="clinic-table">
+                <thead>
+                    <tr>
+                        <th>Date & Time</th>
+                        <th>Provider</th>
+                        <th>Facility</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Oct 24, 2024 • 10:00 AM</td>
+                        <td>Dr. Sarah Jenkins</td>
+                        <td>Main Campus - Suite 402</td>
+                        <td><span class="status-pill status-upcoming">Confirmed</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="clinic-card">
+            <h2>Past Medical History</h2>
+            <table class="clinic-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Provider / Specialty</th>
+                        <th>Notes / Outcome</th>
+                        <th>Billing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Aug 12, 2024</td>
+                        <td>Dr. Marcus Webb<br><span style="font-size: 0.8rem; color: var(--text-muted);">Cardiology</span></td>
+                        <td>Routine Annual EKG. Normal results.</td>
+                        <td>PHP 2,500.00 (Paid)</td>
+                    </tr>
+                    <tr>
+                        <td>Jan 05, 2024</td>
+                        <td>Dr. Emily Chen<br><span style="font-size: 0.8rem; color: var(--text-muted);">General Practice</span></td>
+                        <td>Prescribed antibiotics for sinus infection.</td>
+                        <td>PHP 1,200.00 (Paid)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
