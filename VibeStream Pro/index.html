@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Home</title>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/images/logo.png" />
+            VibeStream Pro
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Explore</a>
+            <a href="/library.html">Library</a>
+            <a href="/playlist.html">Playlists</a>
+            <a href="/login.html">Login</a>
+        </div>
+        <input class="search" placeholder="Search music..." />
+    </header>
+
+    <footer class="player">
+        <div class="queue-header">
+            <span>🎧 Up Next</span>
+        </div>
+
+        <div class="queue">
+            <div class="queue-song" data-src="/assets/music/espresso.mp3">
+            <img src="/assets/images/pop/espresso.jpg">
+            <div class="song-info">
+                <h4>Espresso</h4>
+                <p>Sabrina Carpenter</p>
+            </div>
+            </div>
+
+            <div class="queue-song" data-src="/assets/music/not_like_us.mp3">
+            <img src="/assets/images/hiphop/not_like_us.jpg">
+            <div class="song-info">
+                <h4>Not Like Us</h4>
+                <p>Kendrick Lamar</p>
+            </div>
+            </div>
+
+            <div class="queue-song" data-src="/assets/music/raining_in_manila.mp3">
+            <img src="/assets/images/opm/raining_in_manila.jpg">
+            <div class="song-info">
+                <h4>Raining in Manila</h4>
+                <p>Lola Amour</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="playPause">▶</button>
+        </div>
+
+        <audio id="audioPlayer"></audio>
+    </footer>
+
+
+    <main>
+        <!-- TOP 10 POP -->
+        <section class="section">
+            <h2>🔥 Top 10 Pop</h2>
+            <div class="row">
+                <div class="card"><div class="rank">1</div><img src="/assets/images/pop/espresso.jpg"><h4>Espresso</h4><p>Sabrina Carpenter</p></div>
+                <div class="card"><div class="rank">2</div><img src="/assets/images/pop/cruel_summer.jpg"><h4>Cruel Summer</h4><p>Taylor Swift</p></div>
+                <div class="card"><div class="rank">3</div><img src="/assets/images/pop/greedy.jpg"><h4>Greedy</h4><p>Tate McRae</p></div>
+                <div class="card"><div class="rank">4</div><img src="/assets/images/pop/as_it_was.png"><h4>As It Was</h4><p>Harry Styles</p></div>
+                <div class="card"><div class="rank">5</div><img src="/assets/images/pop/flowers.jpg"><h4>Flowers</h4><p>Miley Cyrus</p></div>
+                <div class="card"><div class="rank">6</div><img src="/assets/images/pop/anti_hero.jpg"><h4>Anti-Hero</h4><p>Taylor Swift</p></div>
+                <div class="card"><div class="rank">7</div><img src="/assets/images/pop/levitating.png"><h4>Levitating</h4><p>Dua Lipa</p></div>
+                <div class="card"><div class="rank">8</div><img src="/assets/images/pop/dance_the_night.jpg"><h4>Dance The Night</h4><p>Dua Lipa</p></div>
+                <div class="card"><div class="rank">9</div><img src="/assets/images/pop/vampire.jpg"><h4>vampire</h4><p>Olivia Rodrigo</p></div>
+                <div class="card"><div class="rank">10</div><img src="/assets/images/pop/bad_habits.jpg"><h4>Bad Habits</h4><p>Ed Sheeran</p></div>
+            </div>
+        </section>
+
+        <!-- TOP 10 HIP-HOP -->
+        <section class="section">
+            <h2>🎤 Top 10 Hip-Hop</h2>
+            <div class="row">
+                <div class="card"><div class="rank">1</div><img src="/assets/images/hiphop/not_like_us.jpg"><h4>Not Like Us</h4><p>Kendrick Lamar</p></div>
+                <div class="card"><div class="rank">2</div><img src="/assets/images/hiphop/houdini.png"><h4>Houdini</h4><p>Eminem</p></div>
+                <div class="card"><div class="rank">3</div><img src="/assets/images/hiphop/first_person_shooter.jpg"><h4>First Person Shooter</h4><p>Drake ft. J. Cole</p></div>
+                <div class="card"><div class="rank">4</div><img src="/assets/images/hiphop/fein.jpg"><h4>FE!N</h4><p>Travis Scott</p></div>
+                <div class="card"><div class="rank">5</div><img src="/assets/images/hiphop/rich_flex.jpg"><h4>Rich Flex</h4><p>Drake & 21 Savage</p></div>
+                <div class="card"><div class="rank">6</div><img src="/assets/images/hiphop/mask_off.jpg"><h4>Mask Off</h4><p>Future</p></div>
+                <div class="card"><div class="rank">7</div><img src="/assets/images/hiphop/damn.jpg"><h4>HUMBLE.</h4><p>Kendrick Lamar</p></div>
+                <div class="card"><div class="rank">8</div><img src="/assets/images/hiphop/god_did.jpg"><h4>God Did</h4><p>DJ Khaled</p></div>
+                <div class="card"><div class="rank">9</div><img src="/assets/images/hiphop/sicko_mode.jpg"><h4>SICKO MODE</h4><p>Travis Scott</p></div>
+                <div class="card"><div class="rank">10</div><img src="/assets/images/hiphop/damn.jpg"><h4>DNA.</h4><p>Kendrick Lamar</p></div>
+            </div>
+        </section>
+
+        <!-- TOP 10 OPM -->
+        <section class="section">
+            <h2>🇵🇭 Top 10 OPM</h2>
+            <div class="row">
+                <div class="card"><div class="rank">1</div><img src="/assets/images/opm/raining_in_manila.jpg"><h4>Raining in Manila</h4><p>Lola Amour</p></div>
+                <div class="card"><div class="rank">2</div><img src="/assets/images/opm/uhaw.jpg"><h4>Uhaw</h4><p>Dilaw</p></div>
+                <div class="card"><div class="rank">3</div><img src="/assets/images/opm/Pasilyo.png"><h4>Pasilyo</h4><p>Sunkissed Lola</p></div>
+                <div class="card"><div class="rank">4</div><img src="/assets/images/opm/gusto.jpg"><h4>Gusto</h4><p>Zack Tabudlo</p></div>
+                <div class="card"><div class="rank">5</div><img src="/assets/images/opm/mundo.jpg"><h4>Mundo</h4><p>IV of Spades</p></div>
+                <div class="card"><div class="rank">6</div><img src="/assets/images/opm/kathang_isip.jpg"><h4>Kathang Isip</h4><p>Ben&Ben</p></div>
+                <div class="card"><div class="rank">7</div><img src="/assets/images/opm/ikaw_lang.jpg"><h4>Ikaw Lang</h4><p>NOBITA</p></div>
+                <div class="card"><div class="rank">8</div><img src="/assets/images/opm/hawak_bitaw.jpg"><h4>Hawak Bitaw</h4><p>LaLuna</p></div>
+                <div class="card"><div class="rank">9</div><img src="/assets/images/opm/paninindigan_kita.jpg"><h4>Paninindigan Kita</h4><p>Ben&Ben</p></div>
+                <div class="card"><div class="rank">10</div><img src="/assets/images/opm/kung_wala_ka.jpg"><h4>Kung Wala Ka</h4><p>Hale</p></div>
+            </div>
+        </section>
+    </main>
+        <script>
+            const audio = document.getElementById("audioPlayer");
+            const playPause = document.getElementById("playPause");
+
+            let currentSong = null;
+
+            /* QUEUE ONLY */
+            document.querySelectorAll(".queue-song").forEach(song => {
+            song.addEventListener("click", () => {
+                const src = song.dataset.src;
+
+                if (currentSong !== src) {
+                audio.src = src;
+                currentSong = src;
+                }
+
+                audio.play()
+                .then(() => playPause.textContent = "⏸")
+                .catch(err => console.error(err));
+            });
+            });
+
+            /* PLAY / PAUSE BUTTON */
+            playPause.addEventListener("click", () => {
+            if (!audio.src) return;
+
+            if (audio.paused) {
+                audio.play();
+                playPause.textContent = "⏸";
+            } else {
+                audio.pause();
+                playPause.textContent = "▶";
+            }
+            });
+        </script>
+</body>
+</html>
