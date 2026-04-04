@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,89 +9,33 @@
     <div id="navbar-placeholder"></div>
 
     <div class="page-container">
-        <h1 style="text-align: center; margin-bottom: 3rem; color: var(--pop-pink);">YOUR PASS</h1>
+        <h1 style="text-align: center; margin-bottom: 3rem;">YOUR DIGITAL PASS</h1>
 
         <div class="ticket-pass">
             <div class="ticket-stub">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=NexusVIPPass12345" alt="QR Code" style="width: 100%; max-width: 200px; border: var(--border-thick); box-shadow: 4px 4px 0px var(--black);">
+                <!-- Pseudo QR Code Style -->
+                <div style="width: 150px; height: 150px; background: repeating-linear-gradient(45deg, var(--black), var(--black) 10px, var(--white) 10px, var(--white) 20px); border: var(--border-thick); display: flex; align-items: center; justify-content: center; background-color: var(--white);">
+                    <div style="background: var(--white); padding: 10px; font-family: 'Archivo Black', sans-serif; border: var(--border-thick);">SCAN ME</div>
+                </div>
             </div>
-            
-            <div class="ticket-details">
-                <h3 style="color: var(--pop-purple); margin-bottom: 0.5rem;">TICKET #NX-88201</h3>
-                <h1 style="font-size: 3rem; margin-bottom: 1rem;">Midnight Cyber-Goth</h1>
+            <div class="ticket-details" style="background: var(--pop-yellow);">
+                <h2 style="font-size: clamp(1.8rem, 5vw, 3rem); color: var(--pop-purple); margin-bottom: 0;">MIDNIGHT CYBER-GOTH</h2>
+                <p style="font-size: 1.5rem; border-bottom: var(--border-thick); padding-bottom: 1rem;">FRI OCT 13 // THE BOILER ROOM</p>
                 
-                <div style="display: flex; gap: 2rem; margin-bottom: 2rem; border-top: var(--border-thick); border-bottom: var(--border-thick); padding: 1rem 0;">
+                <div style="display: flex; justify-content: space-between; margin-top: 2rem; flex-wrap: wrap; gap: 1rem;">
                     <div>
-                        <p style="margin: 0; color: #666;">DATE</p>
-                        <h3>OCT 13</h3>
+                        <h3 style="font-size: 1.2rem; color: var(--black);">ATTENDEE</h3>
+                        <p style="font-size: 1.5rem; margin-bottom: 0;">JOHN DOE</p>
                     </div>
                     <div>
-                        <p style="margin: 0; color: #666;">DOORS</p>
-                        <h3>10:00 PM</h3>
-                    </div>
-                    <div>
-                        <p style="margin: 0; color: #666;">TIER</p>
-                        <h3 style="color: var(--pop-pink);">V.I.P</h3>
+                        <h3 style="font-size: 1.2rem; color: var(--black);">TIER</h3>
+                        <p style="font-size: 1.5rem; margin-bottom: 0;">VIP ALL-ACCESS</p>
                     </div>
                 </div>
-
-                <p>VENUE: <strong>The Boiler Room, 404 Synth Ave.</strong></p>
-                <p style="font-size: 0.9rem; color: #666;">Present this QR code at the door. 21+ strictly enforced. No refunds.</p>
-                
-                <button onclick="window.print()" class="neo-btn btn-cyan" style="margin-top: 1rem;">SAVE TICKET</button>
             </div>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Your Pass - Nexus Events</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="navbar-placeholder"></div>
-
-    <div class="page-container">
-        <h1 style="text-align: center; margin-bottom: 3rem; color: var(--pop-pink);">YOUR PASS</h1>
-
-        <div class="ticket-pass">
-            <div class="ticket-stub">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=NexusVIPPass12345" alt="QR Code" style="width: 100%; max-width: 200px; border: var(--border-thick); box-shadow: 4px 4px 0px var(--black);">
-            </div>
-            
-            <div class="ticket-details">
-                <h3 style="color: var(--pop-purple); margin-bottom: 0.5rem;">TICKET #NX-88201</h3>
-                <h1 style="font-size: 3rem; margin-bottom: 1rem;">Midnight Cyber-Goth</h1>
-                
-                <div style="display: flex; gap: 2rem; margin-bottom: 2rem; border-top: var(--border-thick); border-bottom: var(--border-thick); padding: 1rem 0;">
-                    <div>
-                        <p style="margin: 0; color: #666;">DATE</p>
-                        <h3>OCT 13</h3>
-                    </div>
-                    <div>
-                        <p style="margin: 0; color: #666;">DOORS</p>
-                        <h3>10:00 PM</h3>
-                    </div>
-                    <div>
-                        <p style="margin: 0; color: #666;">TIER</p>
-                        <h3 style="color: var(--pop-pink);">V.I.P</h3>
-                    </div>
-                </div>
-
-                <p>VENUE: <strong>The Boiler Room, 404 Synth Ave.</strong></p>
-                <p style="font-size: 0.9rem; color: #666;">Present this QR code at the door. 21+ strictly enforced. No refunds.</p>
-                
-                <button onclick="window.print()" class="neo-btn btn-cyan" style="margin-top: 1rem;">SAVE TICKET</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
->>>>>>> 6dafc3840ef30180a2823879307c35705586c295
 </html>
