@@ -1,184 +1,61 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
 <title>Clients - LedgerFlow</title>
 
-<style>
-body{font-family:Arial;margin:0;background:#f7f9fc;}
-
-.navbar{
-display:flex;
-justify-content:space-between;
-padding:20px 60px;
-background:white;
-border-bottom:1px solid #e5e5e5;
-}
-
-.navbar a{
-margin-left:20px;
-text-decoration:none;
-color:black;
-}
-
-.container{
-max-width:900px;
-margin:40px auto;
-}
-
-table{
-width:100%;
-background:white;
-border-collapse:collapse;
-}
-
-th,td{
-padding:14px;
-border-bottom:1px solid #eee;
-}
-
-button{
-padding:8px 10px;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="navbar">
-<b>LedgerFlow</b>
-<div>
-<a href="invoices.html">Invoices</a>
-<a href="clients.html">Clients</a>
-<a href="pay.html">Pay</a>
-<a href="dashboard.html">Dashboard</a>
-</div>
-</div>
+<div id="navbar-placeholder"></div>
 
 <div class="container">
 
-<h2>Clients</h2>
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+    <h2 style="margin: 0;">Client Directory</h2>
+    <button class="btn btn-primary" onclick="openAddClientModal()">Add Client</button>
+</div>
 
-<button>Add Client</button>
-
+<div class="table-wrapper">
 <table>
-
+<thead>
 <tr>
 <th>Name</th>
 <th>Email</th>
 <th>Company</th>
 <th>Action</th>
 </tr>
-
-<tr>
-<td>John Smith</td>
-<td>john@email.com</td>
-<td>Acme Corp</td>
-<td><button>Edit</button></td>
-</tr>
-
-<tr>
-<td>Maria Cruz</td>
-<td>maria@email.com</td>
-<td>Nova Ltd</td>
-<td><button>Edit</button></td>
-</tr>
-
+</thead>
+<tbody id="clients-tbody">
+    <!-- Populated by JS -->
+</tbody>
 </table>
+</div>
 
 </div>
 
+<div id="add-client-modal" class="modal-overlay">
+    <div class="modal-content">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+            <h2 style="margin: 0; font-size: 1.5rem;">New Client</h2>
+            <button class="btn btn-outline btn-sm" style="padding: 4px 8px; border: none;" onclick="closeAddClientModal()">✕</button>
+        </div>
+        <form onsubmit="submitAddClient(event)">
+            <label>Full Name</label>
+            <input type="text" id="new-client-name" placeholder="e.g., John Doe" required>
+            
+            <label>Email Address</label>
+            <input type="email" id="new-client-email" placeholder="john@example.com" required>
+            
+            <label>Company Name</label>
+            <input type="text" id="new-client-company" placeholder="Acme Corp" required>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Save Client</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
-=======
-<!DOCTYPE html>
-<html>
-<head>
-<title>Clients - LedgerFlow</title>
-
-<style>
-body{font-family:Arial;margin:0;background:#f7f9fc;}
-
-.navbar{
-display:flex;
-justify-content:space-between;
-padding:20px 60px;
-background:white;
-border-bottom:1px solid #e5e5e5;
-}
-
-.navbar a{
-margin-left:20px;
-text-decoration:none;
-color:black;
-}
-
-.container{
-max-width:900px;
-margin:40px auto;
-}
-
-table{
-width:100%;
-background:white;
-border-collapse:collapse;
-}
-
-th,td{
-padding:14px;
-border-bottom:1px solid #eee;
-}
-
-button{
-padding:8px 10px;
-}
-</style>
-</head>
-
-<body>
-
-<div class="navbar">
-<b>LedgerFlow</b>
-<div>
-<a href="invoices.html">Invoices</a>
-<a href="clients.html">Clients</a>
-<a href="pay.html">Pay</a>
-<a href="dashboard.html">Dashboard</a>
-</div>
-</div>
-
-<div class="container">
-
-<h2>Clients</h2>
-
-<button>Add Client</button>
-
-<table>
-
-<tr>
-<th>Name</th>
-<th>Email</th>
-<th>Company</th>
-<th>Action</th>
-</tr>
-
-<tr>
-<td>John Smith</td>
-<td>john@email.com</td>
-<td>Acme Corp</td>
-<td><button>Edit</button></td>
-</tr>
-
-<tr>
-<td>Maria Cruz</td>
-<td>maria@email.com</td>
-<td>Nova Ltd</td>
-<td><button>Edit</button></td>
-</tr>
-
-</table>
-
-</div>
-
-</body>
->>>>>>> 6dafc3840ef30180a2823879307c35705586c295
 </html>

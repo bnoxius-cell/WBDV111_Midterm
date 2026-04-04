@@ -1,0 +1,79 @@
+:root {
+    --bg: #f9fafb;
+    --surface: #ffffff;
+    --text: #111827;
+    --text-muted: #6b7280;
+    --border: #e5e7eb;
+    --primary: #000000;
+    --primary-hover: #333333;
+}
+
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+    background: var(--bg); 
+    color: var(--text); 
+    margin: 0; 
+}
+
+/* --- NAVBAR --- */
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; background: var(--surface); border-bottom: 1px solid var(--border); }
+.navbar a { margin-left: 30px; text-decoration: none; color: var(--text-muted); font-weight: 500; font-size: 0.95rem; }
+.navbar a:hover, .navbar a.active { color: var(--text); }
+.logo { font-weight: 700; font-size: 1.25rem; color: var(--text); letter-spacing: -0.5px; }
+
+/* --- LAYOUT CONTAINERS --- */
+.container { max-width: 1000px; margin: 60px auto; padding: 0 20px; }
+.login-container { 
+    max-width: 420px; margin: 100px auto; background: var(--surface); 
+    padding: 50px; border-radius: 8px; border: 1px solid var(--border); 
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); 
+}
+
+/* --- SPREADSHEET-STYLE TABLES --- */
+.table-wrapper { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 16px 24px; text-align: left; border-bottom: 1px solid var(--border); }
+th { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); font-weight: 600; background: #f9fafb; }
+td { font-size: 0.95rem; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #f3f4f6; }
+
+/* --- DASHBOARD CARDS --- */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
+.card { background: var(--surface); padding: 30px; border-radius: 8px; border: 1px solid var(--border); }
+.card b { color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.card h2 { margin: 15px 0 0 0; font-size: 2.5rem; letter-spacing: -1px; }
+
+/* --- MINIMALIST FORMS --- */
+input { 
+    width: 100%; padding: 14px 16px; margin-bottom: 20px; border: 1px solid var(--border); 
+    border-radius: 6px; font-size: 0.95rem; box-sizing: border-box; background: var(--bg); transition: border 0.2s; 
+}
+input:focus { outline: none; border-color: var(--primary); background: var(--surface); }
+label { display: block; margin-bottom: 8px; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* --- BUTTONS --- */
+.btn { 
+    display: inline-block; padding: 10px 20px; border-radius: 6px; font-weight: 500; 
+    cursor: pointer; border: 1px solid transparent; font-size: 0.95rem; transition: all 0.2s; text-align: center; 
+}
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-hover); }
+.btn-outline { background: var(--surface); border-color: var(--border); color: var(--text); }
+.btn-outline:hover { border-color: var(--text-muted); }
+.btn-sm { padding: 6px 12px; font-size: 0.85rem; }
+
+.secure { text-align: center; margin-top: 25px; font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
+
+/* --- MODALS --- */
+.modal-overlay {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(17, 24, 39, 0.4); backdrop-filter: blur(4px);
+    z-index: 1000; display: none; align-items: flex-start; justify-content: center;
+    padding-top: 10vh;
+}
+.modal-content {
+    background: var(--surface); padding: 40px; border-radius: 8px;
+    width: 100%; max-width: 450px; border: 1px solid var(--border);
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+}
