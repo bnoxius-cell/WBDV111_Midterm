@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +9,10 @@
     <div id="navbar-placeholder"></div>
 
     <main class="main-content">
-        <h1>Supplier Directory</h1>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1.5rem; border-bottom: var(--border-thick); padding-bottom: 0.5rem;">
+            <h1 style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">Supplier Directory</h1>
+            <button class="btn btn-action" onclick="document.getElementById('add-supplier-modal').style.display='flex'">NEW SUPPLIER</button>
+        </div>
 
         <table class="data-table">
             <thead>
@@ -22,85 +24,33 @@
                     <th>Command</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td style="font-family: monospace;">SUP-001</td>
-                    <td><strong>Manila Logistics Corp.</strong></td>
-                    <td>Metro Manila</td>
-                    <td>Juan Dela Cruz</td>
-                    <td><button class="btn btn-alert" onclick="alertSupplier('Manila Logistics Corp.')">ALERT RESTOCK</button></td>
-                </tr>
-                <tr>
-                    <td style="font-family: monospace;">SUP-045</td>
-                    <td><strong>Cebu Hardware Suppliers Inc.</strong></td>
-                    <td>Visayas</td>
-                    <td>Maria Santos</td>
-                    <td><button class="btn btn-alert" onclick="alertSupplier('Cebu Hardware Suppliers Inc.')">ALERT RESTOCK</button></td>
-                </tr>
-                <tr>
-                    <td style="font-family: monospace;">SUP-088</td>
-                    <td><strong>Global Packaging PH</strong></td>
-                    <td>Laguna</td>
-                    <td>Carlos Reyes</td>
-                    <td><button class="btn btn-alert" onclick="alertSupplier('Global Packaging PH')">ALERT RESTOCK</button></td>
-                </tr>
+            <tbody id="suppliers-tbody">
+                <!-- Populated by JS -->
             </tbody>
         </table>
     </main>
 
-    <script src="script.js"></script>
-</body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Suppliers - StockMaster</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="navbar-placeholder"></div>
-
-    <main class="main-content">
-        <h1>Supplier Directory</h1>
-
-        <table class="data-table">
-            <thead>
-                <tr>
-                    <th>Supplier Code</th>
-                    <th>Company Name</th>
-                    <th>Region</th>
-                    <th>Contact Person</th>
-                    <th>Command</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="font-family: monospace;">SUP-001</td>
-                    <td><strong>Manila Logistics Corp.</strong></td>
-                    <td>Metro Manila</td>
-                    <td>Juan Dela Cruz</td>
-                    <td><button class="btn btn-alert" onclick="alertSupplier('Manila Logistics Corp.')">ALERT RESTOCK</button></td>
-                </tr>
-                <tr>
-                    <td style="font-family: monospace;">SUP-045</td>
-                    <td><strong>Cebu Hardware Suppliers Inc.</strong></td>
-                    <td>Visayas</td>
-                    <td>Maria Santos</td>
-                    <td><button class="btn btn-alert" onclick="alertSupplier('Cebu Hardware Suppliers Inc.')">ALERT RESTOCK</button></td>
-                </tr>
-                <tr>
-                    <td style="font-family: monospace;">SUP-088</td>
-                    <td><strong>Global Packaging PH</strong></td>
-                    <td>Laguna</td>
-                    <td>Carlos Reyes</td>
-                    <td><button class="btn btn-alert" onclick="alertSupplier('Global Packaging PH')">ALERT RESTOCK</button></td>
-                </tr>
-            </tbody>
-        </table>
-    </main>
+    <div id="add-supplier-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 style="margin-top: 0; font-size: 1.5rem;">ADD SUPPLIER</h2>
+            <form onsubmit="event.preventDefault(); const code = 'SUP-' + Math.floor(Math.random() * 900 + 100); const name = document.getElementById('s-name').value; const region = document.getElementById('s-region').value; const contact = document.getElementById('s-contact').value; const s = JSON.parse(localStorage.getItem('stock_suppliers')||'[]'); s.push({code, name, region, contact}); localStorage.setItem('stock_suppliers', JSON.stringify(s)); document.getElementById('add-supplier-modal').style.display='none'; showToast('Supplier Added', 'success'); loadSuppliers(); event.target.reset();">
+                <label style="display: block; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Company Name</label>
+                <input type="text" id="s-name" class="input-flat" style="width: 100%; max-width: 100%; margin-bottom: 1rem;" required>
+                
+                <label style="display: block; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Region</label>
+                <input type="text" id="s-region" class="input-flat" style="width: 100%; max-width: 100%; margin-bottom: 1rem;" required>
+                
+                <label style="display: block; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Contact Person</label>
+                <input type="text" id="s-contact" class="input-flat" style="width: 100%; max-width: 100%; margin-bottom: 2rem;" required>
+                
+                <div style="display: flex; gap: 10px;">
+                    <button type="submit" class="btn btn-action" style="flex: 1;">SAVE</button>
+                    <button type="button" class="btn btn-secondary" style="flex: 1;" onclick="document.getElementById('add-supplier-modal').style.display='none'">CANCEL</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
->>>>>>> 6dafc3840ef30180a2823879307c35705586c295
 </html>

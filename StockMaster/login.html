@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,12 +19,12 @@
         <form onsubmit="handleLogin(event)" style="text-align: left;">
             <div style="margin-bottom: 1.5rem;">
                 <label style="display: block; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Employee ID / Scan Badge</label>
-                <input type="text" id="emp-id" class="input-flat" style="width: 100%; max-width: 100%;" placeholder="Awaiting Input..." required>
+                <input type="text" id="emp-id" class="input-flat" style="width: 100%; max-width: 100%;" placeholder="admin / staff / user" required>
             </div>
             
             <div style="margin-bottom: 2rem;">
                 <label style="display: block; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Passcode</label>
-                <input type="password" class="input-flat" style="width: 100%; max-width: 100%;" placeholder="••••••••" required>
+                <input type="password" id="password" class="input-flat" style="width: 100%; max-width: 100%;" placeholder="••••••••" required>
             </div>
 
             <button type="submit" class="btn btn-action" style="width: 100%; font-size: 1.2rem; padding: 16px;">AUTHORIZE</button>
@@ -34,41 +33,4 @@
 
     <script src="script.js"></script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Terminal Login - StockMaster</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body style="background-color: var(--sidebar-bg); display: flex; align-items: center; justify-content: center; height: 100vh;">
-    
-    <div style="background: var(--bg-app); border: 6px solid var(--safety-orange); padding: 4rem; width: 100%; max-width: 500px; text-align: center;">
-        
-        <div class="barcode-logo" style="border-bottom: 2px solid var(--sidebar-bg); padding-bottom: 1rem; margin-bottom: 2rem;">
-            <div class="barcode-bars" style="color: var(--sidebar-bg);">||| |||| | || |||</div>
-            <div class="logo-text" style="color: var(--sidebar-bg); font-size: 2rem;">STOCKMASTER</div>
-        </div>
-
-        <h2 style="margin-bottom: 2rem; color: var(--text-main);">TERMINAL ACCESS</h2>
-
-        <form onsubmit="handleLogin(event)" style="text-align: left;">
-            <div style="margin-bottom: 1.5rem;">
-                <label style="display: block; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Employee ID / Scan Badge</label>
-                <input type="text" id="emp-id" class="input-flat" style="width: 100%; max-width: 100%;" placeholder="Awaiting Input..." required>
-            </div>
-            
-            <div style="margin-bottom: 2rem;">
-                <label style="display: block; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase;">Passcode</label>
-                <input type="password" class="input-flat" style="width: 100%; max-width: 100%;" placeholder="••••••••" required>
-            </div>
-
-            <button type="submit" class="btn btn-action" style="width: 100%; font-size: 1.2rem; padding: 16px;">AUTHORIZE</button>
-        </form>
-    </div>
-
-    <script src="script.js"></script>
-</body>
->>>>>>> 6dafc3840ef30180a2823879307c35705586c295
 </html>
