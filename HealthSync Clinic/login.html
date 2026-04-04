@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,13 +21,13 @@
 
         <form onsubmit="handleLogin(event)" style="text-align: left;">
             <div style="margin-bottom: 1.5rem;">
-                <label style="font-weight: 600; font-size: 0.9rem; color: var(--text-dark);">Email Address</label>
-                <input type="email" id="email" class="form-input" placeholder="patient@example.com" required>
+                <label style="font-weight: 600; font-size: 0.9rem; color: var(--text-dark);">Username</label>
+                <input type="text" id="username" class="form-input" placeholder="admin / staff / user" required>
             </div>
             
             <div style="margin-bottom: 2rem;">
                 <label style="font-weight: 600; font-size: 0.9rem; color: var(--text-dark);">Password</label>
-                <input type="password" class="form-input" placeholder="••••••••" required>
+                <input type="password" id="password" class="form-input" placeholder="••••••••" required>
             </div>
 
             <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 14px;">Secure Log In</button>
@@ -41,48 +40,4 @@
 
     <script src="script.js"></script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Secure Portal - HealthSync</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body style="justify-content: center; align-items: center; background-color: #f0f9ff;">
-    
-    <div class="clinic-card" style="width: 100%; max-width: 450px; padding: 3rem; text-align: center;">
-        
-        <div style="display: flex; justify-content: center; margin-bottom: 1rem;">
-            <div class="logo-icon" style="width: 48px; height: 48px; font-size: 24px;">+</div>
-        </div>
-        
-        <h2 style="margin-bottom: 0.5rem;">HealthSync Portal</h2>
-        <p style="margin-bottom: 2rem; font-size: 0.9rem;">
-            Sign in to your secure patient account.
-            <span class="verified-badge" style="display: block; width: fit-content; margin: 10px auto 0 auto;">✓ HIPAA Compliant</span>
-        </p>
-
-        <form onsubmit="handleLogin(event)" style="text-align: left;">
-            <div style="margin-bottom: 1.5rem;">
-                <label style="font-weight: 600; font-size: 0.9rem; color: var(--text-dark);">Email Address</label>
-                <input type="email" id="email" class="form-input" placeholder="patient@example.com" required>
-            </div>
-            
-            <div style="margin-bottom: 2rem;">
-                <label style="font-weight: 600; font-size: 0.9rem; color: var(--text-dark);">Password</label>
-                <input type="password" class="form-input" placeholder="••••••••" required>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 14px;">Secure Log In</button>
-        </form>
-
-        <p style="margin-top: 1.5rem; font-size: 0.85rem;">
-            Need an account? <a href="#" style="color: var(--trust-blue); font-weight: 600; text-decoration: none;">Register here.</a>
-        </p>
-    </div>
-
-    <script src="script.js"></script>
-</body>
->>>>>>> 6dafc3840ef30180a2823879307c35705586c295
 </html>
