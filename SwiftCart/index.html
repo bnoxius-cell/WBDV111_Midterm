@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,11 +13,11 @@
         <aside class="sidebar sidebar-left">
             <h3>Categories</h3>
             <ul class="sidebar-nav">
-                <li><a href="#">New Arrivals</a></li>
-                <li><a href="#">Electronics</a></li>
-                <li><a href="#">Apparel</a></li>
-                <li><a href="#">Home & Living</a></li>
-                <li><a href="#">Accessories</a></li>
+                <li><a href="#" class="active" onclick="filterCategory(event, 'all', this)">All Products</a></li>
+                <li><a href="#" onclick="filterCategory(event, 'electronics', this)">Electronics</a></li>
+                <li><a href="#" onclick="filterCategory(event, 'wearables', this)">Wearables</a></li>
+                <li><a href="#" onclick="filterCategory(event, 'apparel', this)">Apparel</a></li>
+                <li><a href="#" onclick="filterCategory(event, 'accessories', this)">Accessories</a></li>
             </ul>
             <h3 style="margin-top: 2rem;">Filters</h3>
             <label style="font-size: 0.9rem; color: var(--text-muted);"><input type="checkbox"> In Stock Only</label><br>
@@ -28,11 +27,10 @@
         <main class="center-products">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
                 <h2>Browse Store</h2>
-                <span style="color: var(--text-muted); font-size: 0.9rem;">Showing 1-4 of 124 products</span>
             </div>
 
             <div class="product-grid">
-                <div class="product-card">
+                <div class="product-card" data-category="electronics">
                     <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80" alt="Headphones" class="product-img">
                     <div class="product-info">
                         <div>
@@ -41,12 +39,12 @@
                         </div>
                         <div>
                             <div class="product-price">$249.00</div>
-                            <button class="btn-primary" style="width: 100%;" onclick="addToCart('Noise-Canceling Pro')">Add to Cart</button>
+                            <button class="btn-primary" style="width: 100%;" onclick="addToCart('Noise-Canceling Pro', 249.00)">Add to Cart</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-category="wearables">
                     <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80" alt="Smartwatch" class="product-img">
                     <div class="product-info">
                         <div>
@@ -55,12 +53,12 @@
                         </div>
                         <div>
                             <div class="product-price">$199.50</div>
-                            <button class="btn-primary" style="width: 100%;" onclick="addToCart('Swift Watch Gen 4')">Add to Cart</button>
+                            <button class="btn-primary" style="width: 100%;" onclick="addToCart('Swift Watch Gen 4', 199.50)">Add to Cart</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-category="apparel">
                     <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80" alt="Sneakers" class="product-img">
                     <div class="product-info">
                         <div>
@@ -69,12 +67,12 @@
                         </div>
                         <div>
                             <div class="product-price">$120.00</div>
-                            <button class="btn-primary" style="width: 100%;" onclick="addToCart('Urban Runners')">Add to Cart</button>
+                            <button class="btn-primary" style="width: 100%;" onclick="addToCart('Urban Runners', 120.00)">Add to Cart</button>
                         </div>
                     </div>
                 </div>
                 
-                <div class="product-card">
+                <div class="product-card" data-category="accessories">
                     <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=500&q=80" alt="Backpack" class="product-img">
                     <div class="product-info">
                         <div>
@@ -83,7 +81,7 @@
                         </div>
                         <div>
                             <div class="product-price">$85.00</div>
-                            <button class="btn-primary" style="width: 100%;" onclick="addToCart('Traveler Daypack')">Add to Cart</button>
+                            <button class="btn-primary" style="width: 100%;" onclick="addToCart('Traveler Daypack', 85.00)">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -92,129 +90,19 @@
 
         <aside class="sidebar sidebar-right">
             <h3>Quick Cart</h3>
-            <div style="padding: 1rem; background: var(--bg-light); border-radius: 8px; margin-bottom: 1rem;">
-                <p style="margin: 0; font-size: 0.9rem; color: var(--text-dark);"><strong>2 Items</strong> selected</p>
+            <div id="quick-cart-items" style="padding: 1rem; background: var(--bg-light); border-radius: 8px; margin-bottom: 1rem;">
+                <p style="margin: 0; font-size: 0.9rem; color: var(--text-dark);"><strong id="quick-cart-count">0</strong> Items selected</p>
                 <div style="display: flex; justify-content: space-between; margin-top: 10px; font-weight: bold;">
                     <span>Subtotal:</span>
-                    <span>$319.50</span>
+                    <span id="quick-cart-total">$0.00</span>
                 </div>
             </div>
             <a href="cart.html" class="btn-primary btn-outline" style="width: 100%; margin-bottom: 10px;">View Cart</a>
-            <a href="checkout.html" class="btn-primary" style="width: 100%;">Checkout</a>
+            <button onclick="goToCheckout()" class="btn-primary" style="width: 100%;">Checkout</button>
         </aside>
 
     </div>
 
     <script src="script.js"></script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Catalog - SwiftCart</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="navbar-placeholder"></div>
-
-    <div class="f-pattern-container">
-        
-        <aside class="sidebar sidebar-left">
-            <h3>Categories</h3>
-            <ul class="sidebar-nav">
-                <li><a href="#">New Arrivals</a></li>
-                <li><a href="#">Electronics</a></li>
-                <li><a href="#">Apparel</a></li>
-                <li><a href="#">Home & Living</a></li>
-                <li><a href="#">Accessories</a></li>
-            </ul>
-            <h3 style="margin-top: 2rem;">Filters</h3>
-            <label style="font-size: 0.9rem; color: var(--text-muted);"><input type="checkbox"> In Stock Only</label><br>
-            <label style="font-size: 0.9rem; color: var(--text-muted);"><input type="checkbox"> Free Shipping</label>
-        </aside>
-
-        <main class="center-products">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-                <h2>Browse Store</h2>
-                <span style="color: var(--text-muted); font-size: 0.9rem;">Showing 1-4 of 124 products</span>
-            </div>
-
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80" alt="Headphones" class="product-img">
-                    <div class="product-info">
-                        <div>
-                            <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Noise-Canceling Pro</h3>
-                            <p style="font-size: 0.85rem;">Electronics</p>
-                        </div>
-                        <div>
-                            <div class="product-price">$249.00</div>
-                            <button class="btn-primary" style="width: 100%;" onclick="addToCart('Noise-Canceling Pro')">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80" alt="Smartwatch" class="product-img">
-                    <div class="product-info">
-                        <div>
-                            <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Swift Watch Gen 4</h3>
-                            <p style="font-size: 0.85rem;">Wearables</p>
-                        </div>
-                        <div>
-                            <div class="product-price">$199.50</div>
-                            <button class="btn-primary" style="width: 100%;" onclick="addToCart('Swift Watch Gen 4')">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80" alt="Sneakers" class="product-img">
-                    <div class="product-info">
-                        <div>
-                            <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Urban Runners</h3>
-                            <p style="font-size: 0.85rem;">Apparel</p>
-                        </div>
-                        <div>
-                            <div class="product-price">$120.00</div>
-                            <button class="btn-primary" style="width: 100%;" onclick="addToCart('Urban Runners')">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=500&q=80" alt="Backpack" class="product-img">
-                    <div class="product-info">
-                        <div>
-                            <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Traveler Daypack</h3>
-                            <p style="font-size: 0.85rem;">Accessories</p>
-                        </div>
-                        <div>
-                            <div class="product-price">$85.00</div>
-                            <button class="btn-primary" style="width: 100%;" onclick="addToCart('Traveler Daypack')">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <aside class="sidebar sidebar-right">
-            <h3>Quick Cart</h3>
-            <div style="padding: 1rem; background: var(--bg-light); border-radius: 8px; margin-bottom: 1rem;">
-                <p style="margin: 0; font-size: 0.9rem; color: var(--text-dark);"><strong>2 Items</strong> selected</p>
-                <div style="display: flex; justify-content: space-between; margin-top: 10px; font-weight: bold;">
-                    <span>Subtotal:</span>
-                    <span>$319.50</span>
-                </div>
-            </div>
-            <a href="cart.html" class="btn-primary btn-outline" style="width: 100%; margin-bottom: 10px;">View Cart</a>
-            <a href="checkout.html" class="btn-primary" style="width: 100%;">Checkout</a>
-        </aside>
-
-    </div>
-
-    <script src="script.js"></script>
-</body>
->>>>>>> 6dafc3840ef30180a2823879307c35705586c295
 </html>
