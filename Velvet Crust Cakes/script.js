@@ -33,6 +33,7 @@ function updateAuthButton() {
         authBtn.onclick = (e) => {
             e.preventDefault();
             localStorage.removeItem('vc_user');
+            localStorage.removeItem('vc_role');
             window.location.reload();
         };
     } else {
@@ -44,9 +45,28 @@ function updateAuthButton() {
 
 function handleLogin(event) {
     event.preventDefault();
-    const input = document.getElementById('username').value;
-    localStorage.setItem('vc_user', input); // Accepts ANY string
-    window.location.href = 'index.html'; // Redirect to home
+    const usernameInput = document.getElementById('username').value.trim().toLowerCase();
+    const passwordInput = document.getElementById('password').value.trim();
+
+    // Hardcoded Database of Users & Roles
+    const mockDatabase = {
+        'admin': { password: 'adminpassword', role: 'admin' },
+        'staff': { password: 'staffpassword', role: 'staff' },
+        'user': { password: 'userpassword', role: 'user' }
+    };
+
+    const userRecord = mockDatabase[usernameInput];
+
+    // Check if user exists and password matches
+    if (userRecord && userRecord.password === passwordInput) {
+        localStorage.setItem('vc_user', usernameInput);
+        localStorage.setItem('vc_role', userRecord.role);
+        
+        alert(`Welcome to Velvet Crust Cakes, ${usernameInput}! [Role: ${userRecord.role}]`);
+        window.location.href = 'index.html';
+    } else {
+        alert("Invalid credentials! Please try admin/adminpassword, staff/staffpassword, or user/userpassword.");
+    }
 }
 
 // Mix & Match Preview Logic
