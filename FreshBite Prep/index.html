@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FreshBite Prep - Select Diet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<!-- Hidden Toggle -->
+<input type="checkbox" id="loginToggle" class="drawer-toggle">
+
+<header class="navbar">
+    <div class="logo"><a href="index.html">FreshBite Prep</a></div>
+    <div class="nav-btns">
+        <a href="meals.html">Meals</a>
+        <a href="delivery.html">Delivery</a>
+        <a href="macros.html">Macros</a>
+        <label for="loginToggle" class="login-open-btn">Login</label>
+
+    </div>
+</header>
+
+<div class="login-drawer">
+
+    <div class="drawer-header">
+        <h2>Login</h2>
+        <label for="loginToggle" class="close-btn">✕</label>
+    </div>
+
+    <form class="drawer-form">
+        <label>Email</label>
+        <input type="email" placeholder="Enter email">
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter password">
+
+        <a href="#" class="forgot">Forgot password?</a>
+
+        <button type="submit">Login</button>
+
+        <p class="register-text">
+            Don't have an account?
+            <a href="#">Register</a>
+        </p>
+    </form>
+</div>
+
+<section class="hero">
+    <h2>Select Your Diet Plan</h2>
+
+    <div class="card-container">
+        <a href="meals.html" class="card" onclick="selectDiet('keto')">
+        <h3>Keto</h3>
+        <p>Low carb, high fat meals.</p>
+        </a>
+
+        <a href="meals.html" class="card" onclick="selectDiet('high-protein')">
+        <h3>High Protein</h3>
+        <p>Muscle-building meals.</p>
+        </a>
+
+        <a href="meals.html" class="card" onclick="selectDiet('vegetarian')">
+        <h3>Vegetarian</h3>
+        <p>Plant-based nutrition.</p>
+        </a>
+    </div>
+</section>
+
+<script>
+  function selectDiet(diet) {
+    localStorage.setItem("selectedDiet", diet);
+  }
+</script>
+
+</body>
+</html>

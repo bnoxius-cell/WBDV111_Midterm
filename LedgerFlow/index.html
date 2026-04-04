@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LedgerFlow</title>
+
+<style>
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f7f9fc;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:white;
+border-bottom:1px solid #e5e5e5;
+}
+
+.logo{
+font-weight:bold;
+font-size:20px;
+}
+
+.container{
+max-width:400px;
+margin:120px auto;
+background:white;
+padding:40px;
+border-radius:8px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+input{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:5px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:black;
+color:white;
+border:none;
+border-radius:5px;
+}
+
+.secure{
+text-align:center;
+margin-top:10px;
+font-size:13px;
+color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+<div class="logo">LedgerFlow</div>
+</div>
+
+<div class="container">
+
+<h2>Login</h2>
+
+<input type="email" placeholder="Email">
+<input type="password" placeholder="Password">
+
+<button onclick="location.href='dashboard.html'">Login</button>
+
+<div class="secure">
+🔒 Secure Login • 2FA Enabled
+</div>
+
+</div>
+
+</body>
+</html>

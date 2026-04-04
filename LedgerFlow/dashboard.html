@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LedgerFlow Dashboard</title>
+
+<style>
+body{font-family:Arial;margin:0;background:#f7f9fc;}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:white;
+border-bottom:1px solid #e5e5e5;
+}
+
+.navbar a{
+margin-left:20px;
+text-decoration:none;
+color:black;
+}
+
+.container{
+max-width:1000px;
+margin:40px auto;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+
+table{
+width:100%;
+margin-top:40px;
+background:white;
+border-collapse:collapse;
+}
+
+th,td{
+padding:15px;
+border-bottom:1px solid #eee;
+text-align:left;
+}
+
+button{
+padding:6px 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+<b>LedgerFlow</b>
+<div>
+<a href="invoices.html">Invoices</a>
+<a href="clients.html">Clients</a>
+<a href="pay.html">Pay</a>
+<a href="dashboard.html">Dashboard</a>
+</div>
+</div>
+
+<div class="container">
+
+<h2>Dashboard</h2>
+
+<div class="cards">
+
+<div class="card">
+<b>Total Invoices</b>
+<h2>24</h2>
+</div>
+
+<div class="card">
+<b>Pending Payments</b>
+<h2>$3,200</h2>
+</div>
+
+<div class="card">
+<b>Clients</b>
+<h2>12</h2>
+</div>
+
+</div>
+
+<table>
+
+<tr>
+<th>Invoice</th>
+<th>Client</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td>#INV-101</td>
+<td>Acme Corp</td>
+<td>Pending</td>
+<td><button>View</button></td>
+</tr>
+
+<tr>
+<td>#INV-102</td>
+<td>Nova Ltd</td>
+<td>Paid</td>
+<td><button>View</button></td>
+</tr>
+
+</table>
+
+</div>
+
+</body>
+</html>

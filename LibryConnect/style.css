@@ -1,0 +1,100 @@
+/* --- VINTAGE-MODERN VARIABLES --- */
+:root {
+    --parchment: #f4f1ea;
+    --card-bg: #fffdf8;
+    --ink: #2b2b2b;
+    --ink-light: #4a4a4a;
+    --stamp-red: #c0392b;
+    --faded-blue: #7f8fa6;
+    --accent-gold: #d4af37;
+    
+    --border-standard: 2px solid var(--ink);
+    --shadow-vintage: 4px 4px 0px rgba(43, 43, 43, 0.15);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--parchment);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+}
+
+h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; color: var(--ink); }
+h1 { font-size: 3.5rem; letter-spacing: -1px; margin-bottom: 1rem; }
+h2 { font-size: 2rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--faded-blue); padding-bottom: 0.5rem; }
+p { line-height: 1.6; color: var(--ink-light); }
+
+.lib-btn {
+    display: inline-block; background-color: var(--card-bg); color: var(--ink);
+    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1rem;
+    padding: 10px 24px; border: var(--border-standard); border-radius: 4px;
+    cursor: pointer; text-decoration: none; box-shadow: 2px 2px 0px var(--faded-blue);
+    transition: all 0.2s ease; text-align: center;
+}
+.lib-btn:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0px var(--faded-blue); }
+.lib-btn:active { transform: translate(1px, 1px); box-shadow: 1px 1px 0px var(--faded-blue); }
+
+.btn-primary { background-color: var(--ink); color: var(--parchment); box-shadow: 2px 2px 0px var(--stamp-red); }
+.btn-primary:hover { box-shadow: 4px 4px 0px var(--stamp-red); color: var(--parchment); }
+.btn-stamp { color: var(--stamp-red); border-color: var(--stamp-red); box-shadow: 2px 2px 0px rgba(192, 57, 43, 0.2); }
+
+.lib-card {
+    background-color: var(--card-bg); border: var(--border-standard);
+    border-radius: 6px; padding: 2rem; box-shadow: var(--shadow-vintage);
+    position: relative; overflow: hidden;
+}
+
+.ruled-lines {
+    background-image: repeating-linear-gradient(transparent, transparent 39px, #d1d8e0 39px, #d1d8e0 40px);
+    line-height: 40px;
+}
+
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.2rem 3rem; background-color: var(--card-bg);
+    border-bottom: 3px double var(--ink); position: sticky; top: 0; z-index: 100;
+}
+.logo { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: bold; color: var(--ink); text-decoration: none; }
+.nav-links { list-style: none; display: flex; gap: 20px; align-items: center; }
+.nav-links a { color: var(--ink-light); text-decoration: none; font-weight: 600; font-size: 1rem; padding: 5px 10px; transition: color 0.2s; }
+.nav-links a:hover { color: var(--stamp-red); }
+.nav-links a.active { color: var(--ink); border-bottom: 2px solid var(--stamp-red); }
+.nav-links a.btn-primary { color: var(--parchment) !important; border-bottom: none; }
+
+.page-container { max-width: 1000px; margin: 3rem auto; padding: 0 2rem; flex: 1; width: 100%; }
+
+.search-hero { text-align: center; padding: 4rem 0; }
+.search-bar-container { display: flex; max-width: 800px; margin: 0 auto; box-shadow: var(--shadow-vintage); border-radius: 6px; }
+.search-input {
+    flex: 1; padding: 20px 25px; font-size: 1.2rem; border: var(--border-standard); border-right: none;
+    border-radius: 6px 0 0 6px; background: var(--card-bg); font-family: 'Inter', sans-serif; outline: none;
+}
+.search-input:focus { background-color: #fff; }
+.search-btn { padding: 0 40px; font-size: 1.2rem; border-radius: 0 6px 6px 0; margin: 0; box-shadow: none; }
+
+.results-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+.book-card { display: flex; gap: 1rem; padding: 1.5rem; }
+.book-cover { width: 90px; height: 135px; background-color: var(--faded-blue); border: 1px solid var(--ink); object-fit: cover; box-shadow: 2px 2px 5px rgba(0,0,0,0.2); }
+.book-info { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+.book-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: bold; margin-bottom: 0.2rem; line-height: 1.2;}
+.book-author { font-size: 0.9rem; color: var(--ink-light); margin-bottom: 0.5rem; }
+.status-badge { display: inline-block; padding: 3px 8px; font-size: 0.75rem; font-weight: bold; border: 1px solid currentColor; border-radius: 3px; width: fit-content; }
+.status-available { color: #27ae60; }
+.status-checked-out { color: var(--stamp-red); }
+
+.login-form input { width: 100%; background: transparent; border: none; font-family: 'Inter', sans-serif; font-size: 1.2rem; color: var(--ink); outline: none; height: 40px; }
+.login-form input::placeholder { color: #a4b0be; font-family: 'Playfair Display', serif; font-style: italic; }
+.input-row { display: flex; align-items: flex-end; }
+.input-label { font-family: 'Playfair Display', serif; font-weight: bold; color: var(--stamp-red); margin-right: 10px; font-size: 0.9rem; white-space: nowrap; }
+
+@media (max-width: 768px) {
+    .search-bar-container { flex-direction: column; box-shadow: none; }
+    .search-input { border-right: var(--border-standard); border-radius: 6px; margin-bottom: 10px; }
+    .search-btn { border-radius: 6px; padding: 15px; box-shadow: 2px 2px 0px var(--stamp-red); }
+    .navbar { flex-direction: column; gap: 15px; }
+}

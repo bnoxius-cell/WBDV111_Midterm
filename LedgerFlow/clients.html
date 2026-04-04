@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Clients - LedgerFlow</title>
+
+<style>
+body{font-family:Arial;margin:0;background:#f7f9fc;}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:white;
+border-bottom:1px solid #e5e5e5;
+}
+
+.navbar a{
+margin-left:20px;
+text-decoration:none;
+color:black;
+}
+
+.container{
+max-width:900px;
+margin:40px auto;
+}
+
+table{
+width:100%;
+background:white;
+border-collapse:collapse;
+}
+
+th,td{
+padding:14px;
+border-bottom:1px solid #eee;
+}
+
+button{
+padding:8px 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+<b>LedgerFlow</b>
+<div>
+<a href="invoices.html">Invoices</a>
+<a href="clients.html">Clients</a>
+<a href="pay.html">Pay</a>
+<a href="dashboard.html">Dashboard</a>
+</div>
+</div>
+
+<div class="container">
+
+<h2>Clients</h2>
+
+<button>Add Client</button>
+
+<table>
+
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Company</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td>John Smith</td>
+<td>john@email.com</td>
+<td>Acme Corp</td>
+<td><button>Edit</button></td>
+</tr>
+
+<tr>
+<td>Maria Cruz</td>
+<td>maria@email.com</td>
+<td>Nova Ltd</td>
+<td><button>Edit</button></td>
+</tr>
+
+</table>
+
+</div>
+
+</body>
+</html>
