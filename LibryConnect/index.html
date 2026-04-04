@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,4 +65,72 @@
 
     <script src="script.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Catalog - LibryConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="page-container">
+        <div class="search-hero">
+            <h1>Library Catalog</h1>
+            <p style="font-family: 'Playfair Display', serif; font-style: italic; margin-bottom: 2rem;">Search millions of resources, books, and archives.</p>
+            
+            <form class="search-bar-container" onsubmit="performSearch(event)">
+                <input type="text" id="search-query" class="search-input" placeholder="Title, Author (WORKING TONG SEARCH SIR, BUT 3 BOOKS LANG)" required>
+                <button type="submit" class="lib-btn btn-primary search-btn">Search</button>
+            </form>
+        </div>
+
+        <div id="search-results" style="display: none; padding-top: 2rem; border-top: 1px solid var(--faded-blue);">
+            <h2 id="search-term-display">Results</h2>
+            
+            <div class="results-grid">
+                <div class="lib-card book-card">
+                    <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=400&q=80" class="book-cover" alt="Old Book">
+                    <div class="book-info">
+                        <div>
+                            <div class="book-title">Noli Me Tangere</div>
+                            <div class="book-author">Jose Rizal</div>
+                            <span class="status-badge status-available">ON SHELF</span>
+                        </div>
+                        <button class="lib-btn" style="padding: 5px 10px; font-size: 0.85rem; margin-top: 10px;" onclick="placeHold('Noli Me Tangere')">Place Hold</button>
+                    </div>
+                </div>
+
+                <div class="lib-card book-card">
+                    <img src="https://images.unsplash.com/photo-1614113489855-66422ad300a4?w=400&q=80" class="book-cover" alt="Dark Book">
+                    <div class="book-info">
+                        <div>
+                            <div class="book-title">Smaller and Smaller Circles</div>
+                            <div class="book-author">F.H. Batacan</div>
+                            <span class="status-badge status-checked-out">DUE: OCT 12</span>
+                        </div>
+                        <button class="lib-btn" style="padding: 5px 10px; font-size: 0.85rem; margin-top: 10px;" onclick="placeHold('Smaller and Smaller Circles')">Join Waitlist</button>
+                    </div>
+                </div>
+
+                <div class="lib-card book-card">
+                    <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400&q=80" class="book-cover" alt="Vintage Book">
+                    <div class="book-info">
+                        <div>
+                            <div class="book-title">A History of the Philippines</div>
+                            <div class="book-author">Samuel K. Tan</div>
+                            <span class="status-badge status-available">ON SHELF</span>
+                        </div>
+                        <button class="lib-btn" style="padding: 5px 10px; font-size: 0.85rem; margin-top: 10px;" onclick="placeHold('A History of the Philippines')">Place Hold</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+>>>>>>> 6dafc3840ef30180a2823879307c35705586c295
 </html>

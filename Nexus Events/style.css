@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* --- NEUBRUTALISM VARIABLES --- */
 :root {
     --bg-light: #f4f4f0;
@@ -130,4 +131,138 @@ p { font-family: 'Courier New', Courier, monospace; font-size: 1.1rem; font-weig
     font-size: clamp(1.5rem, 4vw, 2.2rem); /* Scales the text down specifically for cards */
     overflow-wrap: break-word; /* Forces long words to wrap if they hit the border */
     word-wrap: break-word;
+=======
+/* --- NEUBRUTALISM VARIABLES --- */
+:root {
+    --bg-light: #f4f4f0;
+    --black: #000000;
+    --white: #ffffff;
+    --pop-pink: #ff66c4;
+    --pop-cyan: #00f5d4;
+    --pop-yellow: #ffea00;
+    --pop-purple: #9d4edd;
+    
+    --border-thick: 4px solid var(--black);
+    --shadow-heavy: 8px 8px 0px var(--black);
+    --shadow-hover: 12px 12px 0px var(--black);
+    --shadow-active: 2px 2px 0px var(--black);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    /* Bold, impactful system fonts for a "Poster" feel */
+    font-family: 'Archivo Black', 'Arial Black', Impact, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--black);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: -0.5px;
+}
+
+/* --- TYPOGRAPHY --- */
+h1 { font-size: clamp(3rem, 8vw, 6rem); text-transform: uppercase; line-height: 0.9; margin-bottom: 1rem; }
+h2 { font-size: clamp(2rem, 5vw, 4rem); text-transform: uppercase; margin-bottom: 1.5rem; }
+h3 { font-size: 1.8rem; text-transform: uppercase; }
+p { font-family: 'Courier New', Courier, monospace; font-size: 1.1rem; font-weight: bold; line-height: 1.5; margin-bottom: 1.5rem; }
+
+/* --- NEUBRUTALIST BUTTONS --- */
+.neo-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-family: inherit;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--black);
+    background-color: var(--pop-yellow);
+    border: var(--border-thick);
+    box-shadow: var(--shadow-heavy);
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    text-align: center;
+}
+.neo-btn:hover { box-shadow: var(--shadow-hover); transform: translate(-4px, -4px); }
+.neo-btn:active { box-shadow: var(--shadow-active); transform: translate(6px, 6px); }
+
+.btn-pink { background-color: var(--pop-pink); color: var(--white); }
+.btn-cyan { background-color: var(--pop-cyan); }
+.btn-black { background-color: var(--black); color: var(--pop-yellow); }
+
+/* --- NAVBAR --- */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 2rem; background-color: var(--pop-cyan);
+    border-bottom: var(--border-thick);
+    position: sticky; top: 0; z-index: 100;
+}
+.logo { font-size: 2.5rem; color: var(--black); text-decoration: none; text-shadow: 2px 2px 0px var(--white); }
+.nav-links { list-style: none; display: flex; gap: 15px; align-items: center; }
+.nav-links a {
+    color: var(--black); text-decoration: none; font-size: 1.2rem;
+    padding: 10px 15px; border: 2px solid transparent; transition: all 0.2s;
+}
+.nav-links a:hover { border: var(--border-thick); background: var(--white); box-shadow: 4px 4px 0px var(--black); }
+.nav-links a.active { background: var(--pop-yellow); border: var(--border-thick); box-shadow: 4px 4px 0px var(--black); }
+
+/* --- CARDS & CONTAINERS --- */
+.page-container { max-width: 1200px; margin: 4rem auto; padding: 0 2rem; flex: 1; width: 100%; }
+.poster-header { text-align: center; margin-bottom: 4rem; border-bottom: var(--border-thick); padding-bottom: 2rem; }
+
+.neo-card {
+    background: var(--white);
+    border: var(--border-thick);
+    box-shadow: var(--shadow-heavy);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.2s;
+}
+.neo-card:hover { transform: translateY(-5px); }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
+
+/* --- FORMS --- */
+.neo-form { background: var(--pop-purple); padding: 3rem; border: var(--border-thick); box-shadow: var(--shadow-heavy); color: var(--white); }
+.neo-form label { display: block; font-size: 1.2rem; margin-bottom: 0.5rem; text-transform: uppercase; }
+.neo-input {
+    width: 100%; padding: 15px; font-size: 1.2rem; font-family: 'Courier New', monospace; font-weight: bold;
+    border: var(--border-thick); margin-bottom: 1.5rem; background: var(--white); color: var(--black);
+    box-shadow: 4px 4px 0px var(--black); outline: none; transition: all 0.2s;
+}
+.neo-input:focus { box-shadow: 8px 8px 0px var(--pop-yellow); transform: translate(-4px, -4px); }
+
+/* --- DIGITAL TICKET --- */
+.ticket-pass {
+    background: var(--white); border: var(--border-thick); box-shadow: var(--shadow-heavy);
+    display: flex; max-width: 800px; margin: 0 auto; overflow: hidden;
+}
+.ticket-stub { background: var(--pop-pink); border-right: var(--border-thick); padding: 2rem; display: flex; align-items: center; justify-content: center; width: 30%; }
+.ticket-details { padding: 3rem; width: 70%; }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .navbar { flex-direction: column; gap: 20px; text-align: center; }
+    .nav-links { flex-wrap: wrap; justify-content: center; }
+    .ticket-pass { flex-direction: column; }
+    .ticket-stub { width: 100%; border-right: none; border-bottom: var(--border-thick); }
+    .ticket-details { width: 100%; }
+}
+/* --- FIX FOR NAVBAR BUTTON TEXT COLORS --- */
+.nav-links a.btn-black {
+    color: var(--pop-yellow) !important;
+}
+
+.nav-links a.btn-pink {
+    color: var(--white) !important;
+}
+
+.nav-links a.neo-btn:hover {
+    color: var(--black) !important; /* Optional: keeps text black on hover when background turns white */
+}
+/* --- FIX FOR OVERFLOWING CARD HEADERS --- */
+.neo-card h2 {
+    font-size: clamp(1.5rem, 4vw, 2.2rem); /* Scales the text down specifically for cards */
+    overflow-wrap: break-word; /* Forces long words to wrap if they hit the border */
+    word-wrap: break-word;
+>>>>>>> 6dafc3840ef30180a2823879307c35705586c295
 }

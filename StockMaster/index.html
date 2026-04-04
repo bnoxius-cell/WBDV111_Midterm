@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,4 +58,65 @@
 
     <script src="script.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock - StockMaster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="main-content">
+        <h1>Master Inventory</h1>
+
+        <div class="action-bar">
+            <div>
+                <input type="text" id="scan-input" class="input-flat" placeholder="Awaiting Scanner Input...">
+                <button class="btn btn-secondary" onclick="scanItem()">Manual Entry</button>
+            </div>
+            <button class="btn btn-action" onclick="alert('Scanner module activated.')">ACTIVATE SCANNER</button>
+        </div>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>SKU / Barcode</th>
+                    <th>Item Description</th>
+                    <th>Quantity</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="font-family: monospace; font-weight: bold;">SKU-MNL-8821</td>
+                    <td>Industrial Desk Fan 18"</td>
+                    <td>245 Units</td>
+                    <td><span class="status-badge status-ok">OPTIMAL</span></td>
+                    <td><button class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;" onclick="setLimit('Desk Fan 18')">Set Limit</button></td>
+                </tr>
+                <tr>
+                    <td style="font-family: monospace; font-weight: bold;">SKU-CEB-0992</td>
+                    <td>Heavy Duty Packing Tape 2"</td>
+                    <td>12 Units</td>
+                    <td><span class="status-badge status-low">CRITICAL</span></td>
+                    <td><button class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;" onclick="setLimit('Packing Tape')">Set Limit</button></td>
+                </tr>
+                <tr>
+                    <td style="font-family: monospace; font-weight: bold;">SKU-DVO-4410</td>
+                    <td>Warehouse Utility Gloves (L)</td>
+                    <td>890 Pairs</td>
+                    <td><span class="status-badge status-ok">OPTIMAL</span></td>
+                    <td><button class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;" onclick="setLimit('Utility Gloves')">Set Limit</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+>>>>>>> 6dafc3840ef30180a2823879307c35705586c295
 </html>

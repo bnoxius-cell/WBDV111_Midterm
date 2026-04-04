@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -89,4 +90,97 @@
 </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Choose Meals</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Hidden Toggle -->
+<input type="checkbox" id="loginToggle" class="drawer-toggle">
+
+<header class="navbar">
+    <div class="logo"><a href="index.html">FreshBite Prep</a></div>
+    <div class="nav-btns">
+        <a href="meals.html">Meals</a>
+        <a href="delivery.html">Delivery</a>
+        <a href="macros.html">Macros</a>
+        <label for="loginToggle" class="login-open-btn">Login</label>
+
+    </div>
+</header>
+
+<div class="login-drawer">
+
+    <div class="drawer-header">
+        <h2>Login</h2>
+        <label for="loginToggle" class="close-btn">✕</label>
+    </div>
+
+    <form class="drawer-form">
+        <label>Email</label>
+        <input type="email" placeholder="Enter email">
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter password">
+
+        <a href="#" class="forgot">Forgot password?</a>
+
+        <button type="submit">Login</button>
+
+        <p class="register-text">
+            Don't have an account?
+            <a href="#">Register</a>
+        </p>
+    </form>
+</div>
+
+<h1>Choose Your Weekly Meals</h1>
+
+<div class="card-container">
+
+    <div class="card meal" data-diet="high-protein keto">
+    <h3>Grilled Chicken Bowl</h3>
+    <p>520 kcal | 45g protein</p>
+    </div>
+
+    <div class="card meal" data-diet="vegetarian">
+    <h3>Salmon & Quinoa</h3>
+    <p>610 kcal | 50g protein</p>
+    </div>
+
+    <div class="card meal" data-diet="high-protein">
+    <h3>Beef Stir Fry</h3>
+    <p>680 kcal | 55g protein</p>
+    </div>
+
+    <div class="card meal" data-diet="vegetarian">
+    <h3>Veggie Buddha Bowl</h3>
+    <p>480 kcal | 22g protein</p>
+    </div>
+
+</div>
+
+<div class="next">
+    <a href="delivery.html" class="primary-btn">Continue to Delivery</a>
+</div>
+
+<script>
+  const selectedDiet = localStorage.getItem("selectedDiet");
+  const meals = document.querySelectorAll(".meal");
+
+  meals.forEach(meal => {
+    const mealDiets = meal.dataset.diet.split(" ");
+
+    if (!mealDiets.includes(selectedDiet)) {
+      meal.style.display = "none";
+    }
+  });
+</script>
+
+</body>
+>>>>>>> 6dafc3840ef30180a2823879307c35705586c295
 </html>

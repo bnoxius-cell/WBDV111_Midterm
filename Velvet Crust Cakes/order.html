@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,4 +47,54 @@
 
     <script src="script.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm Order - Velvet Crust</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="content-wrapper" style="display: flex; justify-content: center;">
+        <div class="glass-panel" style="width: 100%; max-width: 700px;">
+            <h2>Pick Date & Confirm</h2>
+            <p>Finalize your delivery and payment details.</p>
+
+            <form onsubmit="event.preventDefault(); alert('Order Confirmed!'); window.location.href='hub.html';">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" class="glass-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Pickup / Delivery Date</label>
+                        <input type="date" class="glass-input" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Delivery Address (Leave blank for in-store pickup)</label>
+                    <textarea class="glass-input" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Mode of Payment</label>
+                    <select class="glass-input" required>
+                        <option value="card">Credit / Debit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="cash">Cash on Pickup</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="cream-btn" style="width: 100%; margin-top: 1rem;">Confirm Order</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+>>>>>>> 6dafc3840ef30180a2823879307c35705586c295
 </html>

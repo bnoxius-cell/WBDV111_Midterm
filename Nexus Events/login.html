@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,4 +30,37 @@
 
     <script src="script.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Nexus Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background: var(--pop-yellow); justify-content: center;">
+    
+    <div id="navbar-placeholder" style="position: absolute; top: 0; width: 100%;"></div>
+
+    <div class="page-container" style="display: flex; justify-content: center; align-items: center;">
+        <div class="neo-card" style="width: 100%; max-width: 500px; padding: 3rem; background: var(--white);">
+            
+            <h1 style="font-size: 4rem; text-align: center; margin-bottom: 2rem; color: var(--pop-purple);">ENTER<br>NEXUS</h1>
+
+            <form onsubmit="handleLogin(event)">
+                <label style="font-family: 'Archivo Black', sans-serif; font-size: 1.2rem;">USERNAME OR EMAIL</label>
+                <input type="text" id="username" class="neo-input" placeholder="RAVER_99" required>
+                
+                <label style="font-family: 'Archivo Black', sans-serif; font-size: 1.2rem;">PASSWORD</label>
+                <input type="password" class="neo-input" placeholder="••••••••" required>
+                
+                <button type="submit" class="neo-btn btn-pink" style="width: 100%; font-size: 2rem; margin-top: 1rem;">LOG IN</button>
+            </form>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+>>>>>>> 6dafc3840ef30180a2823879307c35705586c295
 </html>
