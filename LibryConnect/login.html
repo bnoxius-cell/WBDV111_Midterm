@@ -1,74 +1,26 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Log In - LibryConnect</title>
+    <title>Login - LibryConnect</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="justify-content: center; align-items: center;">
+<body>
+    <div id="navbar-placeholder"></div>
     
-    <div id="navbar-placeholder" style="position: absolute; top: 0; width: 100%;"></div>
-
-    <div class="lib-card ruled-lines" style="width: 100%; max-width: 450px; margin-top: 60px; padding: 3rem 2.5rem;">
-        
-        <div style="text-align: center; margin-bottom: 2rem; line-height: normal;">
-            <h1 style="font-size: 2.5rem; margin-bottom: 0;">LibryConnect</h1>
-            <p style="font-family: 'Courier New', monospace; font-size: 0.85rem; letter-spacing: 2px;">AUTHORIZATION REQUIRED</p>
-        </div>
-
-        <form class="login-form" onsubmit="handleLogin(event)">
-            <div class="input-row">
-                <span class="input-label">ID NO.</span>
-                <input type="text" id="patron-id" placeholder="Enter Patron Number..." required>
-            </div>
+    <div class="lib-card">
+        <h2 style="font-family: var(--vintage-serif); font-size: 2.2rem; margin-bottom: 2.5rem; text-transform: uppercase;">Patron Access</h2>
+        <form onsubmit="handleLogin(event)">
+            <label class="lib-label">Patron ID / Username</label>
+            <input type="text" id="username" class="input-line" required placeholder="admin / staff / user">
             
-            <div class="input-row">
-                <span class="input-label">PIN/PASS</span>
-                <input type="password" placeholder="Enter Security PIN..." required>
-            </div>
-
-            <button type="submit" class="lib-btn btn-primary" style="width: 100%; margin-top: 2rem; font-size: 1.1rem; padding: 12px;">Validate & Enter</button>
+            <label class="lib-label" style="margin-top: 1rem;">PIN / Password</label>
+            <input type="password" id="password" class="input-line" required placeholder="••••••••">
+            
+            <button type="submit" class="btn-vintage" style="width: 100%; margin-top: 1.5rem; padding: 1.2rem;">Authenticate</button>
         </form>
     </div>
 
     <script src="script.js"></script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Log In - LibryConnect</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body style="justify-content: center; align-items: center;">
-    
-    <div id="navbar-placeholder" style="position: absolute; top: 0; width: 100%;"></div>
-
-    <div class="lib-card ruled-lines" style="width: 100%; max-width: 450px; margin-top: 60px; padding: 3rem 2.5rem;">
-        
-        <div style="text-align: center; margin-bottom: 2rem; line-height: normal;">
-            <h1 style="font-size: 2.5rem; margin-bottom: 0;">LibryConnect</h1>
-            <p style="font-family: 'Courier New', monospace; font-size: 0.85rem; letter-spacing: 2px;">AUTHORIZATION REQUIRED</p>
-        </div>
-
-        <form class="login-form" onsubmit="handleLogin(event)">
-            <div class="input-row">
-                <span class="input-label">ID NO.</span>
-                <input type="text" id="patron-id" placeholder="Enter Patron Number..." required>
-            </div>
-            
-            <div class="input-row">
-                <span class="input-label">PIN/PASS</span>
-                <input type="password" placeholder="Enter Security PIN..." required>
-            </div>
-
-            <button type="submit" class="lib-btn btn-primary" style="width: 100%; margin-top: 2rem; font-size: 1.1rem; padding: 12px;">Validate & Enter</button>
-        </form>
-    </div>
-
-    <script src="script.js"></script>
-</body>
->>>>>>> 6dafc3840ef30180a2823879307c35705586c295
 </html>
