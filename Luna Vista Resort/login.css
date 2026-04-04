@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +19,9 @@ video {
     transform: translate(-50%, -50%);
     position: absolute;
     z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     color: white;
@@ -36,48 +37,42 @@ video {
 form .email, form .password {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
-
-=======
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    box-sizing: border-box;
+form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    margin-top: 5px;
+    font-size: 1rem;
 }
 
-video {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: 1;
-}
-
-.login-container {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    z-index: 2;
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(113deg, rgba(112, 217, 255, 1) 0%, rgba(121, 87, 199, 1) 50%, rgba(0, 255, 68, 1) 100%);
+    border: none;
+    border-radius: 5px;
     color: white;
-    padding: 50px;
-    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
 }
 
-.login-container h1 {
+.btn-login:hover {
+    opacity: 0.9;
+}
+
+.register-link {
+    margin-top: 15px;
     text-align: center;
-    margin-bottom: 50px;
+    font-size: 0.95rem;
 }
 
-form .email, form .password {
-    display: flex;
-    flex-direction: column;
+.register-link a {
+    color: #70d9ff;
 }
-
-
->>>>>>> 6dafc3840ef30180a2823879307c35705586c295
