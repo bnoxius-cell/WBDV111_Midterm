@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Itinerary - Luna Vista Resort</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+body {
+    background: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    max-width: 900px;
+    margin: 120px auto 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.container h1 {
+    margin-bottom: 25px;
+    color: #333;
+}
+.itinerary-section {
+    margin-bottom: 35px;
+}
+.itinerary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+.itinerary-item:last-child {
+    border-bottom: none;
+}
+.itinerary-date {
+    font-weight: bold;
+    color: #70d9ff;
+}
+.nav-bar {
+    background: rgba(0, 0, 0, 0.8);
+}
+</style>
+</head>
+<body>
+
+<header class="nav-bar">
+    <div class="logo"><a href="index.html">Luna Vista Resort</a></div>
+    <div class="nav-items">
+        <a href="rooms.html">Rooms</a>
+        <a href="dates.html">Dates</a>
+        <a href="booking.html">Booking</a>
+        <a href="itinerary.html">Itinerary</a>
+        <a href="login.html" class="login">Login</a>
+    </div>
+</header>   
+
+<div class="container">
+    <h1>Your Itinerary</h1>
+    <div class="itinerary-section">
+        <h2>Upcoming Stay</h2>
+        <div class="itinerary-item">
+            <div>
+                <span class="itinerary-date">Day 1: Arrival</span>
+                <p>Check-in and settle into your Ocean View Suite.</p>
+            </div>
+            <div>3:00 PM</div>
+        </div>
+        <div class="itinerary-item">
+            <div>
+                <span class="itinerary-date">Day 2: Relaxation</span>
+                <p>Enjoy Spa Access and Private Cabana reservations.</p>
+            </div>
+            <div>10:00 AM</div>
+        </div>
+        <div class="itinerary-item">
+            <div>
+                <span class="itinerary-date">Day 3: Departure</span>
+                <p>Check-out. Have a safe trip home!</p>
+            </div>
+            <div>11:00 AM</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -8,7 +8,7 @@
 }
 
 a {
-    color: black;
+    color: white;
     font-family: 'Satoshi';
     font-weight: 400; 
     font-size: 1.15rem;
@@ -18,34 +18,48 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
-    padding: 7px 15px;
+    height: 80px;
+    padding: 0 5%;
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    z-index: 10;
-    background: rgba(255, 255, 255, 0.1);
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
 }
 
 .nav-bar .nav-items {
-    gap: 60px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .nav-bar .logo a {
     background: linear-gradient(113deg, rgba(112, 217, 255, 1) 0%, rgba(121, 87, 199, 1) 50%, rgba(0, 255, 68, 1) 100%);
     background-clip: text; 
     color: transparent;
-    padding-left: 90px;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .nav-items a {
-    padding: 7px 15px;
+    padding: 8px 16px;
+    transition: 0.3s;
+}
+
+.nav-items a:hover {
+    color: #70d9ff;
 }
 
 .nav-items .login {
-    border: 2px solid black;
-    margin-right: 120px;
+    border: 2px solid white;
     border-radius: 6px;
+}
+
+.nav-items .login:hover {
+    background: white;
+    color: black;
 }
 
 /* HERO SECTION */
@@ -97,6 +111,11 @@ a {
     text-align: center;
     color: white;
     z-index: 2;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .overlay h1 {
@@ -121,7 +140,7 @@ a {
     padding: 40px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     width: 100%;
-    min-width: 400px;
+    max-width: 500px;
 }
 
 .booking-form .form-group {

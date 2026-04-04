@@ -5,6 +5,58 @@
     box-sizing: border-box;
 }
 
+/* NAVBAR STYLES */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.nav-bar .nav-items {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-bar a {
+    color: white;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 1.15rem;
+    transition: 0.3s;
+}
+
+.nav-bar a:hover {
+    color: #70d9ff;
+}
+
+.nav-bar .logo a {
+    background: linear-gradient(113deg, rgba(112, 217, 255, 1) 0%, rgba(121, 87, 199, 1) 50%, rgba(0, 255, 68, 1) 100%);
+    background-clip: text; 
+    color: transparent;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-items .login {
+    border: 2px solid white;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+.nav-items .login:hover {
+    background: white;
+    color: black;
+}
+
 video {
     position: absolute;
     width: 100vw;

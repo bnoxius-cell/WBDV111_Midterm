@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dates - Luna Vista Resort</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+body {
+    background: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav-bar {
+    background: rgba(0, 0, 0, 0.8);
+}
+.container {
+    max-width: 800px;
+    margin: 120px auto 50px auto;
+    background: white;
+    padding: 50px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.date-picker {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+.date-picker input {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    width: 100%;
+    max-width: 250px;
+}
+.btn-check {
+    margin-top: 40px;
+    padding: 15px 40px;
+    background: #000;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-check:hover {
+    background: #333;
+}
+</style>
+</head>
+<body>
+
+<header class="nav-bar">
+    <div class="logo"><a href="index.html">Luna Vista Resort</a></div>
+    <div class="nav-items">
+        <a href="rooms.html">Rooms</a>
+        <a href="dates.html">Dates</a>
+        <a href="booking.html">Booking</a>
+        <a href="itinerary.html">Itinerary</a>
+        <a href="login.html" class="login">Login</a>
+    </div>
+</header>   
+
+<div class="container">
+    <h1>Select Your Dates</h1>
+    <p>Check availability for your unforgettable stay at Luna Vista Resort.</p>
+    
+    <div class="date-picker">
+        <div>
+            <label style="display:block; margin-bottom: 8px; font-weight: bold;">Check-In</label>
+            <input type="date" required>
+        </div>
+        <div>
+            <label style="display:block; margin-bottom: 8px; font-weight: bold;">Check-Out</label>
+            <input type="date" required>
+        </div>
+    </div>
+    
+    <button class="btn-check" onclick="window.location.href='rooms.html'">Check Availability</button>
+</div>
+
+</body>
+</html>
